@@ -25,7 +25,7 @@ SECRET_KEY = '(pd$s*p^owac7-0%@^4h7qi(#)q4!@b2(^l1uio7t$yvxanf)!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hellnsilence.pythonanywhere.com']
 
 
 # Application definition
