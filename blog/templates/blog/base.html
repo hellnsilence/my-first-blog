@@ -1,0 +1,99 @@
+{% load staticfiles %}
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+<script type="text/javascript">
+function link(str)
+{
+    if(confirm('Open new page?')) window.open(str);
+}
+
+function button()
+{
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event)
+{
+  if (!event.target.matches('.dropbtn'))
+  {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++)
+    {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show'))
+        {
+            openDropdown.classList.remove('show');
+        }
+    }
+  }
+}  
+</script>
+<style>
+.dropbtn {
+    background-color: #008b8b;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #00bebe;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: -140px;
+    border: 1px solid white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 140px;
+    margin-left:-65px;
+}
+	
+.dropdown-content a {
+    color: black;
+    padding: 12px 40px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1}
+
+.show {
+    display:block;
+}
+</style>
+</head>
+<body>
+    <div class="page-header">
+        <h1> <a href="/"> hell 'n silence </a> </h1>
+            <div class="dropdown">
+        <button onclick="button()" class="dropbtn"> Menu </button>
+        <div id="myDropdown" class="dropdown-content">
+            {% if user.is_authenticated %}
+                <a href="/admin"> Admin </a>
+            {% endif %}
+            <a href="javascript:link('https://hellnsilence.tumblr.com/');"> Tumblr </a>
+            <a href="/contact"> Contact </a>
+        </div>
+            </div>
+    </div>
+    <div class="content-container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

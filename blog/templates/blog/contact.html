@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+    function thank()
+    {
+        alert("Thank you for your message!\nIt's very important for me!");
+        window.location = 'http://127.0.0.1:8000/';
+    }
+    </script>
+</head>
+<body>
+   {% extends 'blog/base.html' %}
+   {% block content %}
+   <center>
+    <div class="content-container">
+    <div class="inner">
+		<a href="http://127.0.0.1:8000/"> <input type="button" value="<- back"> </a>
+		<form role="form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" onclick="javascript:thank();">Submit</button>
+	    </form>
+        </div>
+    </div>
+    </center>
+    {% endblock %}
+</body>
+</html>

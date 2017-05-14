@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+h1 a:hover{
+        color: darkcyan;
+    }
+
+    .page-header {
+        background-color: darkcyan;
+        padding: 20px 20px 20px 40px;
+        position: fixed;
+        width:96%;
+        margin-top: -200px;
+    }
+
+    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+        color: #ffffff;
+        font-size: 36pt;
+        text-decoration: none;
+    }
+
+    .content-container {
+        margin-left: 40px;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Lobster', cursive;
+    }
+
+    .date {
+        
+    }
+
+    .save {
+        float: right;
+    }
+
+    .post-form textarea, .post-form input {
+        width: 100%;
+    }
+
+    .top-menu, .top-menu:hover, .top-menu:visited {
+        color: white;
+        float: right;
+        font-size: 26pt;
+        margin-right: 20px;
+    }
+
+    .post {
+        margin-bottom: 70px;
+        margin-left: 25px;
+        margin-right: 20px;
+        font-family:Verdana;
+        font-size:12px;
+    }
+
+    .post h1 a, .post h1 a:visited {
+        color: black;
+    }
+    
+    .inner {
+        color: black;
+        margin-left: 0px;
+        margin-right: 100px;
+        font-family:Verdana;
+        font-size:12px;
+        margin-top: 200px;
+        margin-bottom: -150px;
+    }
+
+    .page-header h4 a {
+        color: white;
+        font-size: 10pt;
+        text-decoration: none;
+    }
+
+    #post_date {
+        color:grey;
+        font-family:Verdana;
+        font-size:12px;
+        margin-left:100px
+    }

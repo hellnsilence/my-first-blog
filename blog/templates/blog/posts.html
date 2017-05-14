@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+    {% extends 'blog/base.html' %}
+    {% block content %}
+    <div class="content container">
+            {% for post in posts %}
+                <div class="inner">
+                    <h1>
+                         <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                        <span id="post_date" style="margin-left:900px;">
+                            {{ post.published_date }}
+                        </span>
+                    </h1>
+                    <p> {{ post.text|linebreaksbr }} </p>
+                </div>
+            {% endfor %}
+    </div>
+    {% endblock content %}
+</body>
+</html>
